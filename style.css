@@ -2150,6 +2150,9 @@ header nav, .desktop-nav, header .btn, header .btn-primary {
   display: none !important;
 }
 
+
+
+
 /* 2. MOBILE PERFECT POSITIONING */
 @media (max-width: 768px) {
  .mobile-trust-badge {
@@ -2160,7 +2163,7 @@ header nav, .desktop-nav, header .btn, header .btn-primary {
     
     /* THE POSITION FIX: Increased from 28% to 35% to push it away from the brand logo */
     position: absolute !important;
-    left: 35% !important; 
+    left: 32% !important; 
     top: 50% !important;
     transform: translate(-50%, -50%) !important;
     
@@ -2187,5 +2190,38 @@ header nav, .desktop-nav, header .btn, header .btn-primary {
     letter-spacing: 0.5px !important;
     text-align: center !important;
     line-height: 1.1 !important; /* Keeps the two lines tight together */
+  }
+}
+
+
+
+/* =========================================================
+   1. FORCE HEADER TO ABSOLUTE TOP (Kills the top gap)
+========================================================= */
+body, html {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+header, .main-header {
+  /* This completely ignores anything trying to push the header down */
+  position: absolute !important; 
+  top: 0 !important; 
+  left: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+  z-index: 9999 !important; /* Forces it to the very front */
+}
+
+/* =========================================================
+   2. DESKTOP ONLY: ACCOUNT ICON SPACING
+========================================================= */
+@media (min-width: 769px) {
+  .header-account-btn {
+    /* Pulls it tight against the Cart */
+    margin-right: 2px !important; 
+    
+    /* Pushes it safely away from the Scan Batch button */
+    margin-left: 20px !important; 
   }
 }
