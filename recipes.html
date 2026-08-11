@@ -3,19 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipes - [Brand Name]</title>
+    <title>Recipes | Ghosh Dhara Traditional Ghee</title>
+    
+    <!-- 1. YOUR MAIN STYLES (This forces the header & footer to look like the homepage) -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- 2. GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- 3. RECIPE PAGE STYLES (This styles only the middle of the page) -->
+    <link rel="stylesheet" href="recipes.css">
 </head>
 <body>
 
-    <!-- PASTE HEADER HERE -->
-
+    <!-- ========================================================= -->
+    <!-- 1. HEADER: Paste your exact <header> from index.html here -->
+    <!-- ========================================================= -->
      <header>
         <div class="container header-inner">
             <a href="index.html" class="logo">
                 <!-- Replace 'logo.png' with the actual file name of your logo -->
                 <img src="Logo.png" alt="Ghosh Family Ghee Logo" class="brand-logo-img">
             </a>
+
+
+            <!-- PREMIUM MOBILE TRUST BADGE -->
+<!-- PREMIUM COMPACT TRUST BADGE (MOBILE ONLY) -->
+<div class="mobile-trust-badge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        <path d="M9 12l2 2 4-4"></path>
+    </svg>
+    <span>CHEMICAL<br>FREE</span>
+</div>
+
+            <!-- PREMIUM MOBILE CENTER SEAL -->
+<div class="mobile-center-seal">
+    <span class="seal-text">100% Pure</span>
+    <span class="seal-icon">🌿</span>
+</div>
             
             <!-- Desktop Nav -->
             <nav class="nav-links">
@@ -31,6 +57,13 @@
             <!-- Utilities: Scan, Cart & Mobile Menu -->
             <div style="display: flex; align-items: center; gap: 20px;">
                 <a href="scan.html" class="header-scan-btn">🔍 Scan Batch</a>
+                <!-- PREMIUM ACCOUNT LOGIN ICON -->
+<a href="login.html" class="header-account-btn" aria-label="Sign In or Register">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+    </svg>
+</a>
                 <a href="#" class="cart-icon-btn text-brand-green" style="font-weight: bold;">🛒 (0)</a>
                 <button id="mobileMenuBtn" class="mobile-menu-btn">☰</button>
             </div>
@@ -50,69 +83,113 @@
         </div>
     </header>
 
-    <div class="recipes-header">
-        <h1 class="font-serif text-brand-green" style="font-size: 2.8rem; margin-bottom: 10px;">Simple Food, Richer Flavour</h1>
-        <p style="opacity: 0.8;">Discover traditional and everyday ways to bring out the best in your cooking.</p>
-        
-        <div class="recipe-categories">
-            <button class="category-tag active">All</button>
-            <button class="category-tag">Everyday Meals</button>
-            <button class="category-tag">Traditional Recipes</button>
-            <button class="category-tag">Festive Cooking</button>
-            <button class="category-tag">Quick Comfort Food</button>
-        </div>
-    </div>
+    
 
-    <div class="container">
-        <div class="recipe-grid">
-            <!-- Recipe 1 -->
-            <div class="recipe-card">
-                <div class="recipe-img">[Dal Tadka Image]</div>
-                <div class="recipe-content">
-                    <div class="recipe-meta">
-                        <span>⏱ 15 Mins</span>
-                        <span>🥣 Everyday</span>
+    <!-- ========================================================= -->
+    <!-- 2. MAIN RECIPE CONTENT (Hero, Grid, Editorial, etc.)      -->
+    <!-- ========================================================= -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content reveal-up">
+                    <span class="eyebrow">GHOSH DHARA KITCHEN</span>
+                    <h1>Simple Food, Richer Flavour.</h1>
+                    <p>Everyday Indian recipes where a spoonful of traditional ghee brings warmth, aroma, and a little more joy to the table.</p>
+                    <div class="hero-buttons">
+                        <a href="#discovery" class="btn-primary">Explore Recipes</a>
+                        <a href="shop.html" class="btn-secondary">Shop Pure Ghee</a>
                     </div>
-                    <h3 class="font-serif" style="margin-bottom: 10px;">Authentic Dal Tadka</h3>
-                    <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 15px;">The secret to the perfect highway-dhaba style dal is a generous double tempering of pure ghee.</p>
-                    <a href="#" class="btn-secondary" style="font-size: 0.8rem; padding: 8px 15px;">Read Recipe</a>
+                </div>
+                <div class="hero-visual reveal-up delay-1">
+                    <div class="gold-arch"></div>
+                    <div class="image-wrapper cyclic-image-container">
+                        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800" alt="Authentic Indian Dal Tadka overhead view" class="cyclic-img">
+                        <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?auto=format&fit=crop&q=80&w=800" alt="Comforting Indian Khichdi with ghee" class="cyclic-img">
+                        <img src="https://images.unsplash.com/photo-1552089123-2d26226fc2b7?auto=format&fit=crop&q=80&w=800" alt="Warm Jeera Rice prepared with ghee" class="cyclic-img">
+                    </div>
+                    <div class="floating-label">Made for everyday cooking</div>
+                    <div class="subtle-illustration">
+                        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1"><path d="M50,10 C50,10 60,30 80,40 C80,40 60,50 50,70 C50,70 40,50 20,40 C20,40 40,30 50,10 Z" opacity="0.3"/></svg>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Recipe 2 -->
-            <div class="recipe-card">
-                <div class="recipe-img">[Khichdi Image]</div>
-                <div class="recipe-content">
-                    <div class="recipe-meta">
-                        <span>⏱ 30 Mins</span>
-                        <span>🍲 Comfort Food</span>
-                    </div>
-                    <h3 class="font-serif" style="margin-bottom: 10px;">Comforting Moong Dal Khichdi</h3>
-                    <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 15px;">A warm bowl of nutrition, elevated with a spoonful of [Brand Name] traditional ghee.</p>
-                    <a href="#" class="btn-secondary" style="font-size: 0.8rem; padding: 8px 15px;">Read Recipe</a>
-                </div>
+        <!-- Discovery & Filters -->
+        <section id="discovery" class="recipe-discovery">
+            <div class="discovery-header reveal-up">
+                <h2>Find a recipe for the moment.</h2>
+                <p>From quick weekday comfort food to recipes for celebrations, discover simple ways to bring out the best in every meal.</p>
+            </div>
+            <div class="filter-container reveal-up delay-1">
+                <button class="filter-pill active" data-filter="all">All</button>
+                <button class="filter-pill" data-filter="everyday-meals">Everyday Meals</button>
+                <button class="filter-pill" data-filter="traditional-recipes">Traditional Recipes</button>
+                <button class="filter-pill" data-filter="festive-cooking">Festive Cooking</button>
+                <button class="filter-pill" data-filter="quick-comfort-food">Quick Comfort Food</button>
             </div>
 
-            <!-- Recipe 3 -->
-            <div class="recipe-card">
-                <div class="recipe-img">[Festive Sweet Image]</div>
-                <div class="recipe-content">
-                    <div class="recipe-meta">
-                        <span>⏱ 45 Mins</span>
-                        <span>✨ Festive Cooking</span>
-                    </div>
-                    <h3 class="font-serif" style="margin-bottom: 10px;">Besan Ladoo</h3>
-                    <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 15px;">Roasting besan in pure granular ghee creates the perfect texture for these festive favorites.</p>
-                    <a href="#" class="btn-secondary" style="font-size: 0.8rem; padding: 8px 15px;">Read Recipe</a>
+            <!-- Recipe Grid -->
+            <div class="recipe-grid" id="recipe-grid">
+                <!-- Cards will be populated by JS to ensure data alignment -->
+            </div>
+        </section>
+
+        <!-- Featured Editorial -->
+        <section class="featured-editorial reveal-up">
+            <div class="editorial-container">
+                <div class="editorial-content">
+                    <span class="eyebrow cream-text">THE GHOSH DHARA FINISH</span>
+                    <h2>The last spoon is often the one you remember.</h2>
+                    <p>A little ghee added at the right moment can carry aroma through a bowl of dal, bring softness to rotis, and make familiar food feel special.</p>
+                    <a href="shop.html" class="btn-primary-inverse">Discover Our Ghee</a>
+                </div>
+                <div class="editorial-visual">
+                    <img src="https://images.unsplash.com/photo-1546833998-316279930777?auto=format&fit=crop&q=80&w=800" alt="Golden ghee melting over warm food" loading="lazy">
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- PASTE FOOTER HERE -->
+        <!-- Trust Strip -->
+        <section class="trust-strip reveal-up">
+            <div class="trust-container">
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <span>Traditionally Crafted</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                    <span>Batch-Tested</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>Traceable Quality</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Made for Everyday Tables</span>
+                </div>
+            </div>
+        </section>
 
-     <!-- FOOTER -->
-    <footer style="background: #1B3E2F !important; background-color: #1B3E2F !important; opacity: 1 !important; backdrop-filter: none !important; position: relative; z-index: 50;">
+        <!-- WhatsApp Invite -->
+        <section class="whatsapp-invite reveal-up">
+            <div class="invite-content">
+                <h2>A little inspiration for your next meal.</h2>
+                <p>Get seasonal recipes, serving ideas and Ghosh Dhara updates on WhatsApp.</p>
+                <a href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener" class="btn-primary">Join on WhatsApp</a>
+            </div>
+        </section>
+        <!-- Paste the <section class="hero-section"> down to the WhatsApp section here -->
+    </main>
+
+
+    <!-- ========================================================= -->
+    <!-- 3. FOOTER: Paste your exact <footer> from index.html here -->
+    <!-- ========================================================= -->
+
+     <footer style="background: #1B3E2F !important; background-color: #1B3E2F !important; opacity: 1 !important; backdrop-filter: none !important; position: relative; z-index: 50;">
         <div class="container footer-grid">
             <div>
                 <a href="index.html">
@@ -170,44 +247,64 @@
             © 2026 Ghosh Dhara</span>. Made with care in Krishnanagar, India.
         </div>
     </footer>
+    
+    
 
-    <!-- SLIDE-OUT CART DRAWER -->
-    <div class="cart-overlay" id="cartOverlay"></div>
-    <div class="cart-drawer" id="cartDrawer">
-        <div class="cart-header">
-            <h2 class="font-serif" style="font-size: 1.5rem;">Your Cart</h2>
-            <button class="close-cart" id="closeCart">×</button>
-        </div>
-        <div class="cart-items">
-            <!-- Empty state -->
-            <div style="text-align: center; color: #888; margin-top: 50px;">
-                <p>Your cart is currently empty.</p>
-                <a href="shop.html" class="btn-primary" style="margin-top: 20px;">Continue Shopping</a>
-            </div>
-            
-            <!-- Example of a populated cart item (Hidden for now) -->
-            <!-- 
-            <div style="display: flex; gap: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
-                <div style="width: 80px; height: 80px; background: #f9f9f9;"></div>
-                <div style="flex: 1;">
-                    <h4 class="font-serif">[Brand Name] Traditional Ghee</h4>
-                    <p style="font-size: 0.8rem; color: #666;">500g Jar</p>
-                    <p style="font-weight: bold; color: var(--brand-gold);">₹[Price]</p>
+    <!-- Recipe Quick-View Modal -->
+  <dialog id="recipe-modal" class="recipe-modal" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close modal">
+                <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div class="modal-layout">
+                <div class="modal-image-col">
+                    <img src="" alt="" id="modal-image" loading="lazy">
                 </div>
-            </div> 
-            -->
-        </div>
-        <div class="cart-footer">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 15px; font-weight: bold; font-size: 1.2rem;">
-                <span>Subtotal</span>
-                <span>₹0.00</span>
+                <div class="modal-text-col">
+                    <h2 id="modal-title">Recipe Title</h2>
+                    <p id="modal-desc" class="modal-description"></p>
+                    
+                    <div class="modal-meta">
+                        <div class="meta-item">
+                            <span>Prep Time</span>
+                            <strong id="modal-prep"></strong>
+                        </div>
+                        <div class="meta-item">
+                            <span>Cook Time</span>
+                            <strong id="modal-cook"></strong>
+                        </div>
+                        <div class="meta-item">
+                            <span>Servings</span>
+                            <strong id="modal-servings"></strong>
+                        </div>
+                        <div class="meta-item">
+                            <span>Difficulty</span>
+                            <strong id="modal-diff"></strong>
+                        </div>
+                    </div>
+
+                    <div class="modal-body-scroll">
+                        <h3>Ingredients</h3>
+                        <ul id="modal-ingredients" class="ingredients-list"></ul>
+                        
+                        <h3>Instructions</h3>
+                        <ol id="modal-steps" class="steps-list"></ol>
+
+                        <div class="ghee-moment-callout">
+                            <h4>The Ghosh Dhara Finish</h4>
+                            <p id="modal-ghee-moment"></p>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a href="shop.html" class="btn-primary full-width">Buy Ghosh Dhara Ghee</a>
+                    </div>
+                </div>
             </div>
-            <p style="font-size: 0.8rem; color: #666; margin-bottom: 15px;">Shipping and taxes calculated at checkout.</p>
-            <button class="checkout-btn">Proceed to Secure Checkout</button>
-            <div style="text-align: center; margin-top: 10px; font-size: 0.8rem; opacity: 0.8;">
-                💳 Cards, UPI & Net Banking Accepted
-            </div>
         </div>
-    </div>
+    </dialog>
+
+    <!-- Scripts -->
+    <script src="recipes.js"></script>
 </body>
 </html>
