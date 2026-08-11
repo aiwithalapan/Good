@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Your Batch - [Brand Name]</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body style="background-color: var(--brand-ivory);">
+
+    <!-- PASTE YOUR HEADER FROM index.html HERE -->
+
+      <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <!-- Replace 'logo.png' with the actual file name of your logo -->
+                <img src="Logo.png" alt="Ghosh Family Ghee Logo" class="brand-logo-img">
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="story.html">Our Story</a>
+                <a href="traceability.html">Quality</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="lab-report.html" style="color: #D4AF37; font-weight: 700;">Lab Report</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            
+            <!-- Utilities: Scan, Cart & Mobile Menu -->
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <a href="scan.html" class="header-scan-btn">🔍 Scan Batch</a>
+                <a href="#" class="cart-icon-btn text-brand-green" style="font-weight: bold;">🛒 (0)</a>
+                <button id="mobileMenuBtn" class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav (Hidden on Desktop) -->
+        <div id="mobileNav" class="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop Ghee</a>
+            <a href="story.html">Our Story</a>
+            <a href="traceability.html">Quality & Traceability</a>
+            <a href="scan.html" style="color: var(--brand-gold);">🔍 Scan Your Batch</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="shipping-returns.html">Shipping & Returns</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="scan-container">
+            <h1 class="font-serif" style="margin-bottom: 15px;">Verify Your Jar</h1>
+            <p style="opacity: 0.8;">Enter the Batch Code printed on the label or lid of your [Brand Name] ghee jar.</p>
+            
+            <div class="scan-input-group">
+                <input type="text" id="batchInput" placeholder="e.g., BATCH-024">
+                <button id="scanBtn">Check Batch</button>
+            </div>
+
+            <!-- Dynamic Results Card (Hidden until JS triggers it) -->
+            <div class="scan-result-card" id="scanResult">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <div style="display: inline-block; background: var(--brand-green); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 10px;">✓ Verified Authentic</div>
+                    <p style="font-style: italic; font-size: 0.9rem;">Your jar is part of a traceable batch. Thank you for choosing food made with care.</p>
+                </div>
+
+                <div class="result-row">
+                    <strong>Batch Number:</strong>
+                    <span>[User Input]</span>
+                </div>
+                <div class="result-row">
+                    <strong>Product:</strong>
+                    <span>[Brand Name] Traditional Ghee</span>
+                </div>
+                <div class="result-row">
+                    <strong>Pack Date:</strong>
+                    <span>[Date Placeholder]</span>
+                </div>
+                <div class="result-row">
+                    <strong>Best Before:</strong>
+                    <span>[Date Placeholder]</span>
+                </div>
+                <div class="result-row">
+                    <strong>Production Location:</strong>
+                    <span>[Location Code Placeholder]</span>
+                </div>
+                <div class="result-row">
+                    <strong>Quality Status:</strong>
+                    <span style="color: green; font-weight: bold;">Passed Independent Test</span>
+                </div>
+
+                <div style="text-align: center; margin-top: 25px;">
+                    <!-- Placeholder button for future PDF uploads -->
+                    <button class="btn-secondary" style="font-size: 0.9rem;" onclick="alert('Lab report PDF download will be available once real data is uploaded.')">📄 Download Lab Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PASTE YOUR FOOTER FROM index.html HERE -->
+     <!-- FOOTER -->
+    <footer style="background: #1B3E2F !important; background-color: #1B3E2F !important; opacity: 1 !important; backdrop-filter: none !important; position: relative; z-index: 50;">
+        <div class="container footer-grid">
+            <div>
+                <a href="index.html">
+                    <!-- You can use the same logo, or a white/light version if your footer is dark -->
+                    <img src="Logo 3.png" alt="Ghosh Family Ghee Logo" class="brand-logo-img-footer">
+                </a>
+                <p style="opacity: 0.8; font-size: 0.9rem;">Traditional Ghee. Tested with Trust.</p>
+                <p style="opacity: 0.8; font-size: 0.8rem; margin-top: 10px;">FSSAI: 12345</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop Ghee</a></li>
+                    <li><a href="story.html">Our Story</a></li>
+                    <li><a href="traceability.html">Quality & Traceability</a></li>
+                    <li><a href="lab-report.html">Lab Report</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="scan.html">Scan Your Batch</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li>WhatsApp: 8653890554</li>
+                    <li>Email: alapanghosh3@gmail.com</li>
+                    <li>Bergoom, Krishnanagar</li>
+                </ul>
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <!-- Facebook -->
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <!-- YouTube -->
+                    <a href="#" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.872.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; border-top: 1px solid rgba(250,250,245,0.2); padding-top: 20px; font-size: 0.8rem; opacity: 0.7;">
+            © 2026 Ghosh Dhara</span>. Made with care in Krishnanagar, India.
+        </div>
+    </footer>
+
+    <!-- SLIDE-OUT CART DRAWER -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2 class="font-serif" style="font-size: 1.5rem;">Your Cart</h2>
+            <button class="close-cart" id="closeCart">×</button>
+        </div>
+        <div class="cart-items">
+            <!-- Empty state -->
+            <div style="text-align: center; color: #888; margin-top: 50px;">
+                <p>Your cart is currently empty.</p>
+                <a href="shop.html" class="btn-primary" style="margin-top: 20px;">Continue Shopping</a>
+            </div>
+            
+            <!-- Example of a populated cart item (Hidden for now) -->
+            <!-- 
+            <div style="display: flex; gap: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+                <div style="width: 80px; height: 80px; background: #f9f9f9;"></div>
+                <div style="flex: 1;">
+                    <h4 class="font-serif">[Brand Name] Traditional Ghee</h4>
+                    <p style="font-size: 0.8rem; color: #666;">500g Jar</p>
+                    <p style="font-weight: bold; color: var(--brand-gold);">₹[Price]</p>
+                </div>
+            </div> 
+            -->
+        </div>
+        <div class="cart-footer">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px; font-weight: bold; font-size: 1.2rem;">
+                <span>Subtotal</span>
+                <span>₹0.00</span>
+            </div>
+            <p style="font-size: 0.8rem; color: #666; margin-bottom: 15px;">Shipping and taxes calculated at checkout.</p>
+            <button class="checkout-btn">Proceed to Secure Checkout</button>
+            <div style="text-align: center; margin-top: 10px; font-size: 0.8rem; opacity: 0.8;">
+                💳 Cards, UPI & Net Banking Accepted
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>
