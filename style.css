@@ -2376,21 +2376,25 @@ a.active-nav::after {
         visibility: visible;
     }
 
-    .mobile-nav-drawer {
+.mobile-nav-drawer {
         display: flex;
         flex-direction: column;
         position: fixed;
         top: 0;
-        right: -100%; /* Starts hidden off-screen to the right */
+        right: -100%; 
         width: 85%;
         max-width: 380px;
-        height: 100vh;
-        background: #FAF8F2; /* Cream theme */
+        height: 100vh; /* Full screen height */
+        background: #FAF8F2; 
         z-index: 99995;
         transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: -10px 0 30px rgba(0,0,0,0.15);
         padding: 25px 30px;
-        overflow-y: auto;
+        
+        /* THE SCROLL FIXES */
+        box-sizing: border-box; /* Keeps padding inside the screen height */
+        overflow-y: auto; /* Forces a scrollbar if the menu gets too long */
+        -webkit-overflow-scrolling: touch; /* Enables smooth, buttery scrolling on mobile devices (especially iPhones) */
     }
     .mobile-nav-drawer.active {
         right: 0; /* Slides in */
