@@ -2294,17 +2294,19 @@ a.active-nav::after {
     }
 
     /* 3. The Perfect Left/Center/Right Layout (Updated for Signature Brand Colors) */
+    /* 3. The Perfect Left/Center/Right Layout (Slim & Blended Background) */
     .mobile-header-layout {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 15px 20px; /* Slightly thicker padding for breathing room */
         
-        /* Uses your signature cream background instead of stark white */
-        background: #FAF8F2; 
+        /* REDUCED: Tightened from 15px to 8px to remove the excess vertical free space */
+        padding: 8px 20px; 
         
-        /* REMOVED: The thin bottom border line is now gone */
+        /* UPDATED: Changed from deep cream to pure white to seamlessly match the kitchen section */
+        background: #FFFFFF; 
+        
         border-bottom: none; 
     }
     
@@ -2318,8 +2320,8 @@ a.active-nav::after {
     .mobile-header-center { flex: 2; display: flex; justify-content: center; }
     
     .mobile-header-center img {
-        /* INCREASED: Bumped up the logo size from 75px to 95px */
-        max-width: 95px; 
+        /* ADJUSTED: Scaled down slightly from 95px to 85px to perfectly fit the new, slimmer header */
+        max-width: 85px; 
         height: auto;
     }
 
