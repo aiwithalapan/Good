@@ -2493,3 +2493,11 @@ a.active-nav::after {
         color: #B86745;
     }
 }
+
+
+/* =========================================================
+   SCROLL LOCK (Prevents background scrolling)
+========================================================= */
+body.no-scroll {
+    overflow: hidden !important;
+}
