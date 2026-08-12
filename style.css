@@ -2403,52 +2403,44 @@ a.active-nav::after {
         border-bottom: 1px solid rgba(217, 177, 45, 0.3); /* Thin gold line */
     }
 
+ /* =========================================================
+       SIGNATURE BRANDING & TOUCH EFFECTS (Mobile Drawer)
+    ========================================================= */
+
+    /* 1. The Close Button (Dark Green to Gold on tap) */
     .close-nav-btn {
         background: none;
         border: none;
-        font-size: 36px;
-        color: #B86745; /* Terracotta */
+        font-size: 38px;
+        color: var(--dark-green, #174B37); /* Signature Dark Green */
         cursor: pointer;
         line-height: 1;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .close-nav-btn:active {
+        transform: rotate(90deg) scale(0.9);
+        color: var(--gold, #D9B12D); /* Flashes gold when tapped */
     }
 
-    /* STAGGERED TEXT ANIMATION EFFECT */
-    .mobile-nav-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        flex-grow: 1;
-    }
-    .mobile-nav-links li {
-        margin-bottom: 25px;
-        opacity: 0;
-        transform: translateX(30px); /* Starts pushed slightly right */
-        transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .mobile-nav-drawer.active .mobile-nav-links li {
-        opacity: 1;
-        transform: translateX(0); /* Glides into place */
-    }
-    
-    /* This creates the beautiful cascading delay effect */
-    .mobile-nav-drawer.active .mobile-nav-links li:nth-child(1) { transition-delay: 0.1s; }
-    .mobile-nav-drawer.active .mobile-nav-links li:nth-child(2) { transition-delay: 0.15s; }
-    .mobile-nav-drawer.active .mobile-nav-links li:nth-child(3) { transition-delay: 0.2s; }
-    .mobile-nav-drawer.active .mobile-nav-links li:nth-child(4) { transition-delay: 0.25s; }
-    .mobile-nav-drawer.active .mobile-nav-links li:nth-child(5) { transition-delay: 0.3s; }
-    .mobile-nav-drawer.active .mobile-nav-links li:nth-child(6) { transition-delay: 0.35s; }
-    .mobile-nav-drawer.active .mobile-nav-links li:nth-child(7) { transition-delay: 0.4s; }
-
+    /* 2. Menu Links (Smooth slide and color shift on touch) */
     .mobile-nav-links a {
         text-decoration: none;
-        color: #174B37;
+        color: var(--dark-green, #174B37); /* Signature Dark Green */
         font-size: 1.25rem;
-        font-family: 'Playfair Display', serif;
+        font-family: var(--font-serif, 'Playfair Display', serif);
         font-weight: 600;
         display: block;
+        padding: 5px 0;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    .mobile-nav-links a:active,
+    .mobile-nav-links a:hover {
+        color: var(--gold, #D9B12D); 
+        transform: translateX(10px); /* Gently slides right when touched */
     }
 
-    /* ATTRACTIVE ACCOUNT SECTION */
+    /* 3. Account Section Header */
     .mobile-account-section {
         margin-top: 30px;
         padding-top: 30px;
@@ -2460,34 +2452,55 @@ a.active-nav::after {
         opacity: 1;
         transform: translateY(0);
     }
-    
     .mobile-account-section h3 {
-        color: #B86745;
-        font-family: 'Inter', sans-serif;
-        font-size: 1.1rem;
+        color: var(--dark-green, #174B37); /* Replaced the brown */
+        font-family: var(--font-sans, 'Inter', sans-serif);
+        font-size: 1rem;
         margin-bottom: 20px;
-        font-weight: 600;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
     }
-    .btn-mobile-login, .btn-mobile-register {
+
+    /* 4. Primary Login Button (Signature Gold & Green) */
+    .btn-mobile-login {
+        background-color: var(--gold, #D9B12D); 
+        color: var(--dark-green, #174B37) !important; 
         display: block;
         width: 100%;
         text-align: center;
-        padding: 15px;
-        border-radius: 30px;
-        font-weight: 700;
+        padding: 14px;
+        border-radius: 4px; /* Matches your main website buttons */
+        font-weight: 600;
         text-decoration: none;
         margin-bottom: 12px;
         font-size: 0.95rem;
-        letter-spacing: 0.05em;
         transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(217, 177, 45, 0.2);
     }
-    .btn-mobile-login {
-        background-color: #B86745; 
-        color: #ffffff;
+    .btn-mobile-login:active {
+        transform: translateY(3px); /* 3D press effect */
+        box-shadow: 0 2px 5px rgba(217, 177, 45, 0.2);
     }
+
+    /* 5. Secondary Register Button (Clean Dark Green Outline) */
     .btn-mobile-register {
         background-color: transparent;
-        border: 2px solid #E5D5C5;
-        color: #B86745;
+        border: 1px solid var(--dark-green, #174B37); 
+        color: var(--dark-green, #174B37) !important; 
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+        border-radius: 4px;
+        font-weight: 600;
+        text-decoration: none;
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+    }
+    .btn-mobile-register:active {
+        background-color: var(--dark-green, #174B37);
+        color: var(--bg-cream, #FAF8F2) !important;
     }
 }
