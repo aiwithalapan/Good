@@ -318,4 +318,49 @@ window.removeFromCart = function(index) {
 // 6. Automatically draw cart on page load
 document.addEventListener('DOMContentLoaded', () => {
     updateCartUI(); 
+    
 });
+
+
+
+
+
+// =========================================================
+// MOBILE NAVIGATION DRAWER LOGIC
+// =========================================================
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const closeMobileNav = document.getElementById('closeMobileNav');
+    const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+
+    if (mobileMenuBtn && mobileNavDrawer) {
+        // Open Drawer
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNavDrawer.classList.add('active');
+            mobileNavOverlay.classList.add('active');
+        });
+
+        // Close Drawer via 'X' Button
+        closeMobileNav.addEventListener('click', () => {
+            mobileNavDrawer.classList.remove('active');
+            mobileNavOverlay.classList.remove('active');
+        });
+
+        // Close Drawer by tapping the dark background
+        mobileNavOverlay.addEventListener('click', () => {
+            mobileNavDrawer.classList.remove('active');
+            mobileNavOverlay.classList.remove('active');
+        });
+    }
+});
+
+
+
+
+
+
+
+
+
+
