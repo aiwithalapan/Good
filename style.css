@@ -2293,18 +2293,23 @@ a.active-nav::after {
         display: none !important;
     }
 
-    /* 3. The Perfect Left/Center/Right Layout */
+    /* 3. The Perfect Left/Center/Right Layout (Updated for Signature Brand Colors) */
     .mobile-header-layout {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 12px 20px;
-        background: #FAF8F2;
-        border-bottom: 1px solid rgba(23, 75, 55, 0.1);
+        padding: 15px 20px; /* Slightly thicker padding for breathing room */
+        
+        /* Uses your signature cream background instead of stark white */
+        background: #FAF8F2; 
+        
+        /* REMOVED: The thin bottom border line is now gone */
+        border-bottom: none; 
     }
+    
     .mobile-header-left, .mobile-header-right {
-        flex: 1; /* Gives equal space to left and right so center stays perfectly middle */
+        flex: 1; 
         display: flex;
         align-items: center;
     }
@@ -2313,9 +2318,13 @@ a.active-nav::after {
     .mobile-header-center { flex: 2; display: flex; justify-content: center; }
     
     .mobile-header-center img {
-        max-width: 75px; 
+        /* INCREASED: Bumped up the logo size from 75px to 95px */
+        max-width: 95px; 
         height: auto;
     }
+
+
+    
 
     /* 4. Mobile Cart Icon Styling */
     .mobile-cart-btn {
