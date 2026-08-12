@@ -106,7 +106,8 @@
                     <div class="image-wrapper cyclic-image-container">
                         <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800" alt="Authentic Indian Dal Tadka overhead view" class="cyclic-img">
                         <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?auto=format&fit=crop&q=80&w=800" alt="Comforting Indian Khichdi with ghee" class="cyclic-img">
-                        <img src="https://images.unsplash.com/photo-1552089123-2d26226fc2b7?auto=format&fit=crop&q=80&w=800" alt="Warm Jeera Rice prepared with ghee" class="cyclic-img">
+                        <img src="Ghi.png" alt="Warm Jeera Rice prepared with ghee" class="cyclic-img">
+                        <img src="Pure.png" alt="Warm Jeera Rice prepared with ghee" class="cyclic-img">
                     </div>
                     <div class="floating-label">Made for everyday cooking</div>
                     <div class="subtle-illustration">
@@ -146,7 +147,7 @@
                     <a href="shop.html" class="btn-primary-inverse">Discover Our Ghee</a>
                 </div>
                 <div class="editorial-visual">
-                    <img src="https://images.unsplash.com/photo-1546833998-316279930777?auto=format&fit=crop&q=80&w=800" alt="Golden ghee melting over warm food" loading="lazy">
+                    <img src="ghee.png" alt="Golden ghee melting over warm food" loading="lazy">
                 </div>
             </div>
         </section>
@@ -178,11 +179,16 @@
             <div class="invite-content">
                 <h2>A little inspiration for your next meal.</h2>
                 <p>Get seasonal recipes, serving ideas and Ghosh Dhara updates on WhatsApp.</p>
-                <a href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener" class="btn-primary">Join on WhatsApp</a>
+                <a href="https://wa.me/8653890554" target="_blank" rel="noopener" class="btn-primary">Join on WhatsApp</a>
             </div>
         </section>
         <!-- Paste the <section class="hero-section"> down to the WhatsApp section here -->
     </main>
+
+
+
+
+    
 
 
     <!-- ========================================================= -->
@@ -247,6 +253,52 @@
             © 2026 Ghosh Dhara</span>. Made with care in Krishnanagar, India.
         </div>
     </footer>
+
+
+
+
+
+        <!-- TOAST SUCCESS MESSAGE -->
+    <div id="cartToast" class="toast-notification">✅ Product successfully added to cart!</div>
+
+    <!-- SLIDE-OUT CART DRAWER -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2 class="font-serif" style="font-size: 1.5rem;">Your Cart</h2>
+            <button class="close-cart" id="closeCart">×</button>
+        </div>
+        <div class="cart-items">
+            <!-- Empty state -->
+            <div style="text-align: center; color: #888; margin-top: 50px;">
+                <p>Your cart is currently empty.</p>
+                <a href="shop.html" class="btn-primary" style="margin-top: 20px;">Continue Shopping</a>
+            </div>
+            
+            <!-- Example of a populated cart item (Hidden for now) -->
+            <!-- 
+            <div style="display: flex; gap: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+                <div style="width: 80px; height: 80px; background: #f9f9f9;"></div>
+                <div style="flex: 1;">
+                    <h4 class="font-serif">[Brand Name] Traditional Ghee</h4>
+                    <p style="font-size: 0.8rem; color: #666;">500g Jar</p>
+                    <p style="font-weight: bold; color: var(--brand-gold);">₹[Price]</p>
+                </div>
+            </div> 
+            -->
+        </div>
+        <div class="cart-footer">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px; font-weight: bold; font-size: 1.2rem;">
+                <span>Subtotal</span>
+                <span>₹0.00</span>
+            </div>
+            <p style="font-size: 0.8rem; color: #666; margin-bottom: 15px;">Shipping and taxes calculated at checkout.</p>
+            <button class="checkout-btn">Proceed to Secure Checkout</button>
+            <div style="text-align: center; margin-top: 10px; font-size: 0.8rem; opacity: 0.8;">
+                💳 Cards, UPI & Net Banking Accepted
+            </div>
+        </div>
+    </div>
     
     
 
@@ -303,6 +355,8 @@
             </div>
         </div>
     </dialog>
+
+    <script src="script.js"></script>
 
     <!-- Scripts -->
     <script src="recipes.js"></script>
