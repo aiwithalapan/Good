@@ -2,7 +2,9 @@
 let cartTotalItems = 0;
 let cartTotalPrice = 0;
 
-// Global Functions so buttons in HTML can find them
+// =========================================================
+// CART OPEN / CLOSE LOGIC
+// =========================================================
 window.openCart = function() {
     const cartOverlay = document.getElementById('cartOverlay');
     const cartDrawer = document.getElementById('cartDrawer');
@@ -12,6 +14,9 @@ window.openCart = function() {
             cartOverlay.style.opacity = '1';
             cartDrawer.classList.add('open');
         }, 10);
+        
+        // Locks the background from scrolling
+        document.body.classList.add('no-scroll');
     }
 };
 
@@ -24,6 +29,9 @@ window.closeCart = function() {
         setTimeout(() => {
             cartOverlay.style.display = 'none';
         }, 300);
+        
+        // Unlocks the background so the user can scroll normally again
+        document.body.classList.remove('no-scroll');
     }
 };
 
@@ -328,6 +336,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // =========================================================
 // MOBILE NAVIGATION DRAWER LOGIC
 // =========================================================
+// =========================================================
+// MOBILE NAVIGATION DRAWER LOGIC
+// =========================================================
 document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const closeMobileNav = document.getElementById('closeMobileNav');
@@ -335,26 +346,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileNavOverlay = document.getElementById('mobileNavOverlay');
 
     if (mobileMenuBtn && mobileNavDrawer) {
-        // Open Drawer
+        // Open Drawer (Adds Scroll Lock)
         mobileMenuBtn.addEventListener('click', () => {
             mobileNavDrawer.classList.add('active');
             mobileNavOverlay.classList.add('active');
+            document.body.classList.add('no-scroll');
         });
 
-        // Close Drawer via 'X' Button
+        // Close Drawer via 'X' Button (Removes Scroll Lock)
         closeMobileNav.addEventListener('click', () => {
             mobileNavDrawer.classList.remove('active');
             mobileNavOverlay.classList.remove('active');
+            document.body.classList.remove('no-scroll');
         });
 
-        // Close Drawer by tapping the dark background
+        // Close Drawer by tapping the dark background (Removes Scroll Lock)
         mobileNavOverlay.addEventListener('click', () => {
             mobileNavDrawer.classList.remove('active');
             mobileNavOverlay.classList.remove('active');
+            document.body.classList.remove('no-scroll');
         });
     }
 });
-
 
 
 
