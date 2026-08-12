@@ -2513,3 +2513,123 @@ a.active-nav::after {
 body.no-scroll {
     overflow: hidden !important;
 }
+
+
+
+/* =========================================================
+   PREMIUM FOOTER BOTTOM (Golden Foundation Bar)
+========================================================= */
+/* =========================================================
+   PREMIUM FOOTER BOTTOM (Flowing Wave Edition)
+========================================================= */
+/* =========================================================
+   PREMIUM FOOTER BOTTOM (Layered Wave & Bottom Lock Fix)
+========================================================= */
+
+/* 1. Prevents the gold bar from covering up your footer links */
+.footer-grid {
+    padding-bottom: 95px !important; 
+}
+
+/* 2. The Gold Bar (Locked to absolute bottom) */
+.premium-footer-bottom {
+    position: absolute;
+    bottom: 0;       /* This entirely eliminates the dark green gap at the bottom */
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #D4AF37 0%, #B5852A 100%);
+    color: #174B37;
+    padding: 60px 0 20px 0; /* Extra top padding so text stays clear of the deep waves */
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+/* 3. The Custom Layered Shape */
+.footer-shape-divider {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+}
+
+.footer-shape-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 48px; /* Taller height to show off the beautiful layered effect */
+}
+
+/* 2. The Subtle Luxury Shine Animation */
+.premium-footer-bottom::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: -150%;
+    width: 50%; 
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    animation: goldShine 7s infinite;
+    z-index: 0;
+}
+
+@keyframes goldShine {
+    0% { left: -150%; }
+    20% { left: 200%; }
+    100% { left: 200%; }
+}
+
+/* 3. Layout & Typography */
+.footer-bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2; /* Keeps the text clearly above the wave and shine */
+}
+
+.copyright-text, .made-with-care {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* 4. The Center Star */
+.footer-decorative-icon {
+    font-size: 1.2rem;
+    color: #174B37;
+    animation: gentlePulse 3s infinite alternate;
+}
+
+@keyframes gentlePulse {
+    0% { transform: scale(0.9); opacity: 0.7; }
+    100% { transform: scale(1.1); opacity: 1; }
+}
+
+/* =========================================================
+   (Keep the Mobile Responsiveness media query you already pasted)
+========================================================= */
+/* 4. Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer-bottom-inner {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 8px;
+    }
+    
+    .footer-decorative-icon {
+        display: none; /* Hides the star on mobile to keep it clean */
+    }
+    
+    .copyright-text, .made-with-care {
+        font-size: 0.8rem;
+    }
+}
