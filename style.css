@@ -2380,21 +2380,29 @@ a.active-nav::after {
         display: flex;
         flex-direction: column;
         position: fixed;
+        
+        /* 1. ANCHOR TO TOP AND BOTTOM */
         top: 0;
+        bottom: 0; 
+        
         right: -100%; 
         width: 85%;
         max-width: 380px;
-        height: 100vh; /* Full screen height */
+        
+        /* 2. THE FIX: Use 100% instead of 100vh */
+        height: 100%; 
+        
         background: #FAF8F2; 
         z-index: 99995;
         transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: -10px 0 30px rgba(0,0,0,0.15);
-        padding: 25px 30px;
         
-        /* THE SCROLL FIXES */
-        box-sizing: border-box; /* Keeps padding inside the screen height */
-        overflow-y: auto; /* Forces a scrollbar if the menu gets too long */
-        -webkit-overflow-scrolling: touch; /* Enables smooth, buttery scrolling on mobile devices (especially iPhones) */
+        /* Adding a little extra bottom padding so the last button isn't hugging the screen edge */
+        padding: 25px 30px 40px 30px; 
+        
+        box-sizing: border-box; 
+        overflow-y: auto; 
+        -webkit-overflow-scrolling: touch; 
     }
     .mobile-nav-drawer.active {
         right: 0; /* Slides in */
