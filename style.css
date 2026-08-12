@@ -2214,3 +2214,62 @@ header, .main-header {
 body {
   padding-top: 65px !important; 
 }
+
+
+/* =========================================================
+   DESKTOP LOGO ADJUSTMENT (Size Increase & Left Shift)
+========================================================= */
+@media (min-width: 769px) {
+  header .logo img, 
+  header .brand-logo-img,
+  header .brand-logo img {
+    /* 1. Increase the size (Previous size was around 90px) */
+    max-width: 110px !important; 
+    height: auto !important;
+    
+    /* 2. Pull the logo towards the left edge */
+    margin-left: -20px !important; 
+  }
+}
+
+
+/* =========================================================
+   ACTIVE NAVIGATION LINK (Current Page Indicator)
+========================================================= */
+a.active-nav {
+    color: #D4AF37 !important; /* Premium Gold text */
+    font-weight: 700 !important;
+    position: relative !important;
+}
+
+/* The elegant gold underline */
+a.active-nav::after {
+    content: '';
+    position: absolute;
+    bottom: -6px; /* Pushes the line slightly below the text */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #D4AF37; 
+    border-radius: 2px;
+}
+
+
+
+
+/* =========================================================
+   CART DRAWER Z-INDEX FIX (Forces Cart OVER the Header)
+========================================================= */
+#cartOverlay {
+    /* Puts the dark background just above the header (which is 9999) */
+    z-index: 99998 !important; 
+}
+
+#cartDrawer, .cart-drawer, .cart-modal {
+    /* Puts the actual cart drawer above absolutely everything */
+    z-index: 99999 !important; 
+    
+    /* Ensures the cart physically touches the top of the browser */
+    top: 0 !important; 
+    margin-top: 0 !important;
+}
