@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
             time: "40 min",
             difficulty: "Hard",
             servings: "4",
-            img: "sukto.png",
+            img: "Sukto.png",
             desc: "A delicate, milk-based vegetable medley with a hint of bitterness, traditionally served as the palate-cleansing first course.",
             ingredients: [
                 "Mixed chopped veggies: Bitter gourd (Korola), Raw banana, Sweet potato, Drumsticks",
