@@ -356,3 +356,31 @@ a.active-nav::after {
     .process-imagery { flex-direction: column; }
     .process-imagery img { width: 100%; }
 }
+
+
+
+
+/* =========================================================
+   FORCE ACTIVE NAVIGATION HIGHLIGHT (Story Page Only)
+========================================================= */
+header a[href="story.html"],
+.desktop-nav a[href="story.html"],
+.nav-links a[href="story.html"] {
+    color: #D4AF37 !important;
+    font-weight: 800 !important;
+    position: relative !important;
+}
+
+header a[href="story.html"]::after,
+.desktop-nav a[href="story.html"]::after,
+.nav-links a[href="story.html"]::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -6px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 2px !important;
+    background-color: #D4AF37 !important;
+    border-radius: 2px !important;
+    display: block !important;
+}
