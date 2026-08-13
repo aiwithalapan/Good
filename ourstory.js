@@ -46,37 +46,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-            const storyMenuBtn = document.getElementById('mobileMenuBtn');
-            const storyNavDrawer = document.getElementById('mobileNavDrawer');
-            const storyNavOverlay = document.getElementById('mobileNavOverlay');
-            const storyCloseNav = document.getElementById('closeMobileNav');
-
-            if (storyMenuBtn && storyNavDrawer) {
-                // Open Menu
-                storyMenuBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    storyNavDrawer.classList.add('active');
-                    storyNavOverlay.classList.add('active');
-                    document.body.classList.add('no-scroll');
-                });
-
-                // Close Menu via 'X'
-                if (storyCloseNav) {
-                    storyCloseNav.addEventListener('click', () => {
-                        storyNavDrawer.classList.remove('active');
-                        storyNavOverlay.classList.remove('active');
-                        document.body.classList.remove('no-scroll');
-                    });
-                }
-
-                // Close Menu via Overlay tap
-                if (storyNavOverlay) {
-                    storyNavOverlay.addEventListener('click', () => {
-                        storyNavDrawer.classList.remove('active');
-                        storyNavOverlay.classList.remove('active');
-                        document.body.classList.remove('no-scroll');
-                    });
-                }
-            }
-        });
